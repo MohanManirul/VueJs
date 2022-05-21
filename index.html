@@ -12,7 +12,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="vue.global.js"></script>
     <title>Title</title>
@@ -23,7 +22,12 @@
 
       <div id="app">
         <h3>Enter a Number</h3>
-        <input type="text" @input="handleInput">
+        <input type="text" @input="handleInput" /> <br><br>
+        <button class="btn btn-success">Get Double</button> &nbsp
+        <button class="btn btn-warning">Get Square</button> &nbsp
+        <button class="btn btn-danger">Reset</button>&nbsp
+        <hr>
+        <label for="">Result : </label>
       </div>
 
     
@@ -31,8 +35,5 @@
     </div>
     
     <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
