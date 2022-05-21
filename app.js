@@ -1,8 +1,7 @@
 var app = Vue.createApp({
     data() {
         return {
-            textColor : "black",
-            bgColor : "green",
+            skills : ["HTML", "CSS", "JS"],
         };
     },
     

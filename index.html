@@ -21,10 +21,11 @@
     <div class="container">
       <h2>VueJs Bangla Tutorial</h2>
 
-      <br id="app">
-        <input type="text" v-model="textColor" /> <hr>
-        <input type="text" v-model="bgColor" /> <hr>
-        <div class="card" :style="{backgroundColor:  bgColor , color: textColor}">Card</div>
+      <div id="app">
+        <h3>Skills</h3>
+        <ul>
+          <li v-for="skill in skills">{{ skill }}</li>
+        </ul>
       </div>  
 
     </div>
