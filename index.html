@@ -26,7 +26,7 @@
         <input type="text" v-model="newSkill" /> &nbsp
         <button class="btn btn-success" @click="addSkill">Add Skill</button>
         <ul style="list-style: none;">
-          <li v-for="(skill , i) in skills">{{ i +1 }}. {{ skill }}</li>
+          <li v-for="(skill , i) in skills" @click="removeItem">{{ i +1 }}. {{ skill }}</li>
         </ul>
       </div>  
 
