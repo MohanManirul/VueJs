@@ -1,10 +1,12 @@
- 
 var app = Vue.createApp({
     data() {
         return {
-            msg : "welcome to vuejs3 bangla tutorial",
-        }
+            textColor : "black",
+            bgColor : "green",
+        };
     },
+    
+
 });
 
 app.mount("#app");
