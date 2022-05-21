@@ -1,15 +1,10 @@
 var app = Vue.createApp({
     data() {
         return {
-            activeClass: "red"
+            textColor : "black",
+            bgColor : "green",
         };
     },
-    methods: {
-        setClass(ClassName){
-            this.activeClass = ClassName;
-        }
-    },
-
     
 
 });
