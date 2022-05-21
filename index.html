@@ -27,13 +27,17 @@
           @input="handleInput" event binding
           :value="num" attribute binding          
         -->
-        <input type="text" v-model="num"/> <br><br>
+        <!-- <input type="text" v-model="num"/> <br><br> -->
         <!-- 
           two-way binding = event binding + attribute binding 
           v:model="num" = @input="handleInput" :value="num" 
         -->
+
+        <input type="text" v-model.number="num"/> <br><br>
+        <!-- v-model.number set input value as number -->
         <button class="btn btn-success" @click="getDouble">Get Double</button> &nbsp
         <button class="btn btn-warning" @click="getSquare">Get Square</button> &nbsp
+        <button class="btn btn-info"    @click="addTen">Add Ten</button> &nbsp
         <button class="btn btn-danger"  @click="getReset">Reset</button>&nbsp
         <hr>
         <label for="">Result : {{ result }}</label>

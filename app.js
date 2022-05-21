@@ -18,6 +18,10 @@ var app = Vue.createApp({
         getSquare(){
             this.result = this.num * this.num ;
         },
+        
+        addTen(){
+            this.result = this.num + 10 ;
+        },
     
         getReset(){
             this.num = "";
