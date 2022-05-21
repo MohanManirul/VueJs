@@ -21,16 +21,15 @@
     <div class="container">
       <h2>VueJs Bangla Tutorial</h2>
 
-      <p class="red">ff</p>
       <div id="app">
 
-        <button class="btn btn-success" @click="setClass('red')">Red</button> &nbsp
-        <button class="btn btn-warning" @click="setClass('green')">Green</button> &nbsp
-        <button class="btn btn-info"    @click="setClass('blue')">Blue</button> &nbsp
+        <button  :class="{active:activeClass=='red'}"     @click="setClass('red')">Red</button> &nbsp
+        <button  :class="{active:activeClass=='green', bold:true}"   @click="setClass('green')">Green</button> &nbsp
+        <button  :class="{active:activeClass=='blue'}"    @click="setClass('blue')">Blue</button> &nbsp
 
         <hr>
-        <div :class="activeClass"></div>
-
+        <div :class="activeClass"></div><hr>
+        <button :class="['button' , 'active' , {active:activeClass=='green', bold:true}]">Always Active</button> <!-- class binding using both array and object  -->!>
       </div>
 
     

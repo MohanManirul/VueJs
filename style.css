@@ -1,9 +1,18 @@
+header{
+    background-color: #1f2c46;
+    color: #41b883;
+    font-size: 22px;
+    padding: 22px;
+}
 
 #app {
     padding: 33px;
 }
 button {
     padding:  5px 11px;
+}
+.bold{
+    font-weight: bold;
 }
 .active{
     background-color: rgb(3, 78, 97);
