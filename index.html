@@ -22,10 +22,10 @@
 
       <div id="app">
         <h3>Enter a Number</h3>
-        <input type="text" @input="handleInput" /> <br><br>
+        <input type="text" @input="handleInput" :value="num"/> <br><br>
         <button class="btn btn-success" @click="getDouble">Get Double</button> &nbsp
         <button class="btn btn-warning" @click="getSquare">Get Square</button> &nbsp
-        <button class="btn btn-danger" @click="getReset">Reset</button>&nbsp
+        <button class="btn btn-danger"  @click="getReset">Reset</button>&nbsp
         <hr>
         <label for="">Result : {{ result }}</label>
       </div>
