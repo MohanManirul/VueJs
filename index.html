@@ -23,8 +23,10 @@
 
       <div id="app">
         <h3>Skills</h3>
-        <ul>
-          <li v-for="skill in skills">{{ skill }}</li>
+        <input type="text" v-model="newSkill" /> &nbsp
+        <button class="btn btn-success" @click="addSkill">Add Skill</button>
+        <ul style="list-style: none;">
+          <li v-for="(skill , i) in skills">{{ i +1 }}. {{ skill }}</li>
         </ul>
       </div>  
 
