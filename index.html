@@ -13,6 +13,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .red {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+      }
+      .green {
+            width: 100px;
+            height: 50px;
+            background-color: green;
+      }
+      .blue {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+      }
+    </style>
     <script src="vue.global.js"></script>
     <title>Title</title>
   </head>
@@ -20,27 +37,16 @@
     <div class="container">
       <h2>VueJs Bangla Tutorial</h2>
 
+      <p class="red">ff</p>
       <div id="app">
-        <h3>Enter a Number</h3>
-        <!-- <input type="text" @input="handleInput" :value="num"/> <br><br>  -->
-        <!-- manual binding
-          @input="handleInput" event binding
-          :value="num" attribute binding          
-        -->
-        <!-- <input type="text" v-model="num"/> <br><br> -->
-        <!-- 
-          two-way binding = event binding + attribute binding 
-          v:model="num" = @input="handleInput" :value="num" 
-        -->
 
-        <input type="text" v-model.number="num"/> <br><br>
-        <!-- v-model.number set input value as number -->
-        <button class="btn btn-success" @click="getDouble">Get Double</button> &nbsp
-        <button class="btn btn-warning" @click="getSquare">Get Square</button> &nbsp
-        <button class="btn btn-info"    @click="addTen">Add Ten</button> &nbsp
-        <button class="btn btn-danger"  @click="getReset">Reset</button>&nbsp
+        <button class="btn btn-success" @click="setClass('red')">Red</button> &nbsp
+        <button class="btn btn-warning" @click="setClass('green')">Green</button> &nbsp
+        <button class="btn btn-info"    @click="setClass('blue')">Blue</button> &nbsp
+
         <hr>
-        <label for="">Result : {{ result }}</label>
+        <div :class="activeClass"></div>
+
       </div>
 
     
