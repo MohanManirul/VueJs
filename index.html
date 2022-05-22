@@ -22,10 +22,16 @@
       <h2>VueJs Bangla Tutorial</h2>
 
       <div id="app">
-        <button @click="toggle">Show / Hide</button><hr>
-        <div class="card" v-if="show"></div>
-        <div class="card" v-show="show"></div>
-      </div>  
+        <ul style="list-style: none">
+          <li v-for="(skill , i) in skills" :key="skill.name">
+            <p>{{ i + 1 }} . {{ skill.name }} 
+              <span v-if="skill.experience < 3">Beginner</span>
+              <span v-else-if="skill.experience < 5">Profficient</span>
+              <span v-else="skill.experience < 5">Expert</span>
+            </p>          
+          </li>         
+        </ul>
+      </div>   
 
     </div>
     
