@@ -1,37 +1,27 @@
-var app = Vue.createApp({
+var app1 = Vue.createApp({
     data() { 
         return {
-          mobile : "",
-          name:{
-              firstName: "",
-              lastName: "",
-          }
-
+            name: ""
         };
     },
-    watch : {
-        mobile(newValue , oldValue){
-            console.log(newValue);
-            if(isNaN(newValue)){
-                alert('Enter valid mobile number');
-                this.mobile = oldValue;
-            }
-            if(newValue.length == 11){
-                alert('An OTP hasbeen sent');
-            }
-        },
-
-        'name.firstName': function(newValue ){
-            console.log(newValue); 
-        },
-        name:{
-            deep : true ,
-            handler : function(newValue , oldValue){
-                console.log(newValue , oldValue);
-            }
-        }
-    }
-
+    template : `
+    
+    <h2>Enter Your Name</h2>
+    <input type="text" v-model="name" placeholder="Enter First Name"> <hr>
+    <p>Your Full Name is : {{ name }}</p>
+    `
 });
 
-app.mount("#app");
+app1.mount("#html_app1");
+
+
+var app2 = Vue.createApp({
+    data() { 
+        return {
+            messege: "Hello World..."
+        };
+    },
+    template : "<p>Your Full Name is : {{ messege }}</p>"
+});
+
+app2.mount("#html_app2");

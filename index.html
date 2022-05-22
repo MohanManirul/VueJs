@@ -19,35 +19,18 @@
   </head>
   <body>
     <div class="container">
-      <h2>VueJs Bangla Tutorial</h2>
 
-      <div id="app">
-        <input
+      <div id="html_app1">
+        <h2>Enter Your Name</h2>
+       <input type="text" v-model="name" placeholder="Enter First Name"> <hr>
+       <p>Your Full Name is : {{ name }}</p>
+      </div>
 
-        type="text" 
-        v-model="mobile" 
-        placeholder="enter 11 digit mobile number"
-        
-        >
-        <br> <br>
-        <hr>
-        <input
+      <div id="html_app2">
+      
+      </div>
 
-        type="text" 
-        v-model="name.firstName" 
-        placeholder="enter first name"
-        
-        ><hr>
-        <input
-
-        type="text" 
-        v-model="name.lastName" 
-        placeholder="enter last name"
-        
-        >
-      </div>   
-
-    </div>
+     </div>
     
     <script src="app.js"></script>
   </body>
