@@ -22,12 +22,26 @@
       <h2>VueJs Bangla Tutorial</h2>
 
       <div id="app">
+        <input type="text" placeholder="write your review" v-model="review"
+        >
         <ul style="list-style: none">
           <li v-for="(skill , i) in skills" :key="skill.name">
             <p>{{ i + 1 }} . {{ skill.name }} 
               <span v-if="skill.experience < 3">Beginner</span>
               <span v-else-if="skill.experience < 5">Profficient</span>
               <span v-else="skill.experience < 5">Expert</span>
+            </p>          
+          </li>         
+        </ul>
+        <h3>Total : {{ totalCount1 }}</h3>
+        <h3>Total : {{ skills.length }}</h3>
+        <p>Experience Skills</p>
+        <ul style="list-style: none">
+          <li 
+            v-for="(skill , i) in experiencedSkills" 
+            :key="skill.name"
+          >
+            <p> {{ skill.name }} {{ skill.experience }} 
             </p>          
           </li>         
         </ul>
