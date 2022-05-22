@@ -22,12 +22,9 @@
       <h2>VueJs Bangla Tutorial</h2>
 
       <div id="app">
-        <h3>Skills</h3>
-        <input type="text" v-model="newSkill" /> &nbsp
-        <button class="btn btn-success" @click="addSkill">Add Skill</button>
-        <ul style="list-style: none;">
-          <li v-for="(skill , i) in skills" @click="removeItem">{{ i +1 }}. {{ skill }}</li>
-        </ul>
+        <button @click="toggle">Show / Hide</button><hr>
+        <div class="card" v-if="show"></div>
+        <div class="card" v-show="show"></div>
       </div>  
 
     </div>
