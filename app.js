@@ -1,27 +1,22 @@
-var app1 = Vue.createApp({
+var app = Vue.createApp({
     data() { 
-        return {
-            name: ""
-        };
+        return {};
     },
-    template : `
-    
-    <h2>Enter Your Name</h2>
-    <input type="text" v-model="name" placeholder="Enter First Name"> <hr>
-    <p>Your Full Name is : {{ name }}</p>
+});
+
+app.component('contact-details' , {
+    data(){
+        return{
+           name : "Mamunur Rashid" 
+        }
+        
+    },
+    template: `
+        <h2>Contact Details</h2>
+        <p><strong>Name:</strong>Mamunur Rashid</p>
+        <p><strong>Web:</strong>www.mamunbd.com</p>
+        <p><strong>Address:</strong>Dhaka , Bangladesh</p>
     `
 });
 
-app1.mount("#html_app1");
-
-
-var app2 = Vue.createApp({
-    data() { 
-        return {
-            messege: "Hello World..."
-        };
-    },
-    template : "<p>Your Full Name is : {{ messege }}</p>"
-});
-
-app2.mount("#html_app2");
+app.mount("#app");
