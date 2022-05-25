@@ -1,36 +1,21 @@
-var app = Vue.createApp({
+var app1 = Vue.createApp({
     data() { 
         return {
-            mobile : '',
-            name:{
-               firstName: '', 
-               lastName: '', 
-            }
+           name: "asasa"
         };
     },
-    watch: {
-        mobile(newValue , oldValue){
-            console.log(newValue);
-            if(isNaN(newValue)){
-                alert('enter valid number');
-                this.mobile = oldValue;
-            }
+  
+});
 
-            if(newValue.length == 11) {
-                alert('an otp has been sent');
-            }
-        },
-        'name.firstName' :function(newValue , oldValue){
-            console.log(newValue , oldValue);
-        },
-        name : {
-            deep : true,
-            handler: function(newValue, oldValue){
-                console.log(newValue, oldValue);
-            }
+
+app1.mount("#app1");
+
+var app2 = Vue.createApp({
+    data(){
+        return {
+            messege : "Hello World"
         }
     }
 });
 
-
-app.mount("#app");
+app2.mount("#app2");
