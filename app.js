@@ -1,21 +1,36 @@
 var app = Vue.createApp({
     data() { 
-        return {};
+        return {
+            mobile : '',
+            name:{
+               firstName: '', 
+               lastName: '', 
+            }
+        };
     },
+    watch: {
+        mobile(newValue , oldValue){
+            console.log(newValue);
+            if(isNaN(newValue)){
+                alert('enter valid number');
+                this.mobile = oldValue;
+            }
+
+            if(newValue.length == 11) {
+                alert('an otp has been sent');
+            }
+        },
+        'name.firstName' :function(newValue , oldValue){
+            console.log(newValue , oldValue);
+        },
+        name : {
+            deep : true,
+            handler: function(newValue, oldValue){
+                console.log(newValue, oldValue);
+            }
+        }
+    }
 });
 
-app.component('contact-details' , {
-    data(){
-        return{
-           name : "Mamunur Rashid" 
-        }
-        
-    },
-    template: `
-        <h2>Contact Details</h2>
-        <p><strong>Name:</strong>Mamunur Rashid</p>
-        <p><strong>Web:</strong>www.mamunbd.com</p>
-    `
-});
 
 app.mount("#app");
