@@ -1,6 +1,7 @@
 var app1 = Vue.createApp({
     data() { 
         return {
+<<<<<<< HEAD
            name: "manirul"
         };
     },
@@ -21,6 +22,21 @@ var app2 = Vue.createApp({
         }
     },
     template  : " <h3>{{ messege }}</h3>"
+=======
+            msg : "Counter App" ,
+            count : 0
+        };
+    },
+    methods: {
+        increase() {            
+           
+        },
+        decrease() {
+            this.count-- ;
+        }
+    },
+  
+>>>>>>> origin/mohan
 });
 
 app2.mount("#app2");
