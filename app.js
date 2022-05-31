@@ -1,24 +1,20 @@
 var app = Vue.createApp({
     data() { 
         return {
-           skills : [
-               {name: "HTML" , experience : 1},
-               {name: "css" , experience : 2},
-               {name: "js" , experience : 3},
-               {name: "php" , experience : 4},
-               {name: "laravel" , experience : 5}
-           ],
-           newSkill : {name  : "" , experience:0}
+          skills : [
+              {name: "HTMl" , experience : 1},
+              {name: "CSS" , experience : 2},
+              {name: "JavaScript" , experience : 3},
+              {name: "PHP" , experience : 4},
+              {name: "MySqli" , experience : 1},
+              {name: "Ajax" , experience : 2},
+              {name: "jQuery" , experience : 3},
+              {name: "laravel" , experience : 4},
+          ]
         };
     },
     methods: {
-        addSkill(){
-            this.skills.push(this.newSkill);
-            this.newSkill = {}
-        },
-        removeSkill(i){
-            this.skills.splice(i , 1);
-        }
+       
     },
   
 });

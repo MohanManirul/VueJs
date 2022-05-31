@@ -21,17 +21,17 @@
     <div class="container">     
 
       <div id="app">
-       <h3>Skills</h3>
-       <input type="text" v-model="newSkill.name">
-       <button class="button" @click="addSkill">Add Skill</button>
-       <ul>
-         <li style="list-style: none;" v-for="(skill , i ) in skills" @click="removeSkill(i)">
-           {{ i + 1 }} {{ skill.name }} ({{ skill.experience }})
-         </li>
-       </ul>
+        <ul>
+          <li style="list-style: none;" v-for="( skill , key , i ) in skills" :key="skill.name">
+            {{ key+1 }} . {{ skill.name }} ({{ skill.experience }})
+            <span v-if="skill.experience < 2 ">Beginner</span>
+            <span v-else-if="skill.experience < 3 ">Mid Level</span>
+            <span v-else="skill.experience < 4 ">Expert</span>
+          </li>
+        </ul>
       </div>
      
-     </div>
+    </div>
     
     <script src="app.js"></script>
   </body>
