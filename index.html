@@ -21,17 +21,14 @@
     <div class="container">     
 
       <div id="app">
-        <form  @submit.prevent="handleFormSubmit">
-          <h3>Enter Your Name</h3>
-          <input type="text" @keyup="handleKeyup">
-          <p>Welcome : {{ name }}</p> &nbsp;
-          <button type="button" class="btn btn-success">Ok</button>
-        </form>  
+        <p>Enter Number</p>
+        <input type="text" @input="handleInput">&nbsp;
+        <button @click="double">Double</button> &nbsp;
+        <button @click="squire">Squire</button> &nbsp;
+        <button @click="reset">Reset</button> &nbsp;
         <hr>
-        
-        <div class="card" @click="handleCardClick">
-          <button class="button" @click.stop="handleViewClick">View</button>
-        </div>
+        <p>Enterd {{ num }}</p> <hr>
+        <p>Result : {{ result }}</p>
       </div>
      
      </div>

@@ -1,22 +1,26 @@
 var app = Vue.createApp({
     data() { 
         return {
-            name : ""
+            num : "",
+            result : ""
         };
     },
     methods: {
-        handleKeyup(e){
-            this.name = e.target.value;
+        // received input value as num 
+        handleInput(e){
+            this.num = e.target.value;
         },
-        handleFormSubmit(ev) {
-            console.log("form submitted !");
+
+        double(){
+            this.result = this.num * 2 ;
         },
-        handleCardClick(e){
-            console.log("Card Clicked...");
+        squire(){
+            this.result = this.num * this.num ;
         },
-        handleViewClick(e){
-            console.log("Button Clicked...");
+        reset(){
+            this.result = this.num * 0 ;
         }
+
     },
   
 });
