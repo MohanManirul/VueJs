@@ -1,19 +1,12 @@
 var app = Vue.createApp({
     data() { 
         return {
-            msg : "Counter App" ,
-            count : 0
+            name : ""
         };
     },
     methods: {
-        increase(amount) {            
-           this.count= this.count + amount ;
-        },
-        decrease(amount) {
-            this.count= this.count - amount ;
-        },
-        test(ev) {
-            console.log(ev);
+        handleMethod(e){
+            this.name = e.target.value;
         }
     },
   

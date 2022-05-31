@@ -21,11 +21,9 @@
     <div class="container">     
 
       <div id="app">
-        <p>{{ msg }}</p>
-        <p>Count: {{ count }}</p>
-        <button  @click="increase(10)">Increase</button> &nbsp;
-        <button @click="decrease(10)">Decrease</button> &nbsp;
-        <button @click="test($event)">click</button>
+        <h3>Enter your name</h3>
+        <input type="text" @keyup="handleMethod">
+        <p>Welcome : {{ name }}</p>
       </div>
      
      </div>
