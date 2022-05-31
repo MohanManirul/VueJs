@@ -1,12 +1,13 @@
 var app = Vue.createApp({
     data() { 
         return {
-            activeClass : "red",
+           skills : ["HTML" , "CSS" , "JS"],
+           newSkill :""
         };
     },
     methods: {
-        setClass(className){
-            this.activeClass = className ;
+        addSkill(){
+            this.skills.push(this.newSkill);
         }
     },
   

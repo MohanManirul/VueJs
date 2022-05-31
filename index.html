@@ -21,11 +21,14 @@
     <div class="container">     
 
       <div id="app">
-        <button :class="{active: activeClass=='red'}" @click="setClass('red')">Red</button> &nbsp;
-        <button :class="{active: activeClass=='green'}"  @click="setClass('green')">Green</button> &nbsp;
-        <button :class="{active: activeClass=='blue'}"  @click="setClass('blue')">Blue</button> 
-        <hr>
-        <div :class="activeClass"></div>
+       <h3>Skills</h3>
+       <input type="text" v-model="newSkill">
+       <button class="button" @click="addSkill">Add Skill</button>
+       <ul>
+         <li style="list-style: number ;" v-for="skill in skills">
+            {{ skill }}
+         </li>
+       </ul>
       </div>
      
      </div>
