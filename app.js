@@ -11,6 +11,9 @@ var app = Vue.createApp({
         },
         decrease(amount) {
             this.count= this.count - amount ;
+        },
+        test(ev) {
+            console.log(ev);
         }
     },
   
