@@ -9,9 +9,13 @@ var app = Vue.createApp({
             this.name = e.target.value;
         },
         handleFormSubmit(ev) {
-            ev.preventDefault();
-            
-            console.log(ev.target.value);
+            console.log("form submitted !");
+        },
+        handleCardClick(e){
+            console.log("Card Clicked...");
+        },
+        handleViewClick(e){
+            console.log("Button Clicked...");
         }
     },
   
