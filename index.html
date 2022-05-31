@@ -21,9 +21,12 @@
     <div class="container">     
 
       <div id="app">
-        <h3>Enter your name</h3>
-        <input type="text" @keyup="handleMethod">
-        <p>Welcome : {{ name }}</p>
+        <form action="" @submit="handleFormSubmit">
+          <h3>Enter Your Name</h3>
+          <input type="text" @keyup="handleKeyup">
+          <p>Welcome : {{ name }}</p> &nbsp;
+          <button type="button" class="btn btn-success">Ok</button>
+        </form>       
       </div>
      
      </div>
