@@ -21,12 +21,12 @@
     <div class="container">     
 
       <div id="app">
-        <input type="text" v-model="mobile" placeholder="enter 11 digit mobile number" /><br><hr>
-
-        <input type="text" v-model="name.firstName" placeholder="Enter First Name"> &nbsp;
-        <input type="text" v-model="name.lastName" placeholder="Enter Last Name">
+        <p>{{ msg }}</p>
+        <p>Count: {{ count }}</p>
+        <button @click="count=count+1">Increase</button> @nbsp
+        <button @click="decrease">Decrease</button>
       </div>
-
+     
      </div>
     
     <script src="app.js"></script>
