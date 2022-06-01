@@ -1,27 +1,28 @@
-var app = Vue.createApp({
+var app1 = Vue.createApp({
     data() { 
         return {
-          mobile : "",
-          name : {
-              firstname : "",
-              lastname : ""
-          }
+          name: ""
         };
     },
-   watch : {
-       mobile(newValue , oldValue){
-           console.log(newValue);
-           if(isNaN(newValue)){
-               alert("Enter a valid Number");
-               this.mobile = oldValue ;
-           }
-           if(newValue.length == 11){
-            alert("An OTP has been sent");
-           }
-       }
-    
-    }
-  
+    template :`
+        <p>from app1</p>
+        <p>hello</p>
+        <h3>your Name is {{ name }}</h3>
+    `
+
+ 
 });
 
-app.mount("#app");
+app1.mount("#app1");
+
+var app2 = Vue.createApp({
+    data() { 
+        return {
+          
+        };
+    },
+    template:"<p>from app2</p>"
+ 
+});
+
+app2.mount("#app2");
