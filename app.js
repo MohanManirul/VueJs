@@ -1,28 +1,23 @@
-var app1 = Vue.createApp({
+var app = Vue.createApp({
     data() { 
         return {
-          name: ""
+          name: "hassan"
         };
+    } 
+});
+
+app.component('contact-details',{
+    data(){
+        return {
+            name : "Mamunur Rashid"
+        }
     },
-    template :`
-        <p>from app1</p>
-        <p>hello</p>
-        <h3>your Name is {{ name }}</h3>
+    template:  `
+      <h1>Contact Details</h1>
+      <p><strong>Name: </strong>Md.Manirul Islam</p>  
+      <p><strong>District: </strong>Rajshahi</p>  
+      <p><strong>Thana: </strong>Puthia</p>  
     `
-
- 
 });
 
-app1.mount("#app1");
-
-var app2 = Vue.createApp({
-    data() { 
-        return {
-          
-        };
-    },
-    template:"<p>from app2</p>"
- 
-});
-
-app2.mount("#app2");
+app.mount("#app");
