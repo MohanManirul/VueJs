@@ -21,14 +21,20 @@
     <div class="container">     
 
       <div id="app">
-        <ul>
-          <li style="list-style: none;" v-for="( skill , key , i ) in skills" :key="skill.name">
-            {{ key+1 }} . {{ skill.name }} ({{ skill.experience }})
-            <span v-if="skill.experience < 2 ">Beginner</span>
-            <span v-else-if="skill.experience < 3 ">Mid Level</span>
-            <span v-else="skill.experience < 4 ">Expert</span>
-          </li>
-        </ul>
+        <input type="text" v-model="mobile" placeholder="Enter 11 digit phone number">
+       <hr>
+       <input
+        type="text" 
+        v-model="firstname" 
+        placeholder="Enter firstname"
+        ><hr>
+
+        <input 
+        type="text" 
+        v-model="lastname" 
+        placeholder="Enter lastname"
+        >
+
       </div>
      
     </div>
