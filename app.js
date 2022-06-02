@@ -1,12 +1,8 @@
-var app = Vue.createApp({
-    data() { 
-        return {
-          name: "hassan"
-        };
-    } 
+var app1 = Vue.createApp({
+   
 });
 
-app.component('contact-details',{
+app1.component('contact-details',{
     data(){
         return {
             name : "Mamunur Rashid"
@@ -20,4 +16,5 @@ app.component('contact-details',{
     `
 });
 
-app.mount("#app");
+
+app1.mount("#app");
